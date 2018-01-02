@@ -29,7 +29,7 @@ class OctalView : View() {
     fun convert() {
         when {
             inputText.value == "Octal" -> {
-                if (Regex(pattern = "[a-z A-Z 8-9]").containsMatchIn(input.value)) {
+                if (Regex(pattern = "[a-z A-Z8-9]").containsMatchIn(input.value)) {
                     println("invalid input")
                 } else {
                     val digits = input.value.toCharArray()
@@ -37,7 +37,7 @@ class OctalView : View() {
                     var count = 0
                     var decimal = 0
                     while (counter >= 0) {
-                        decimal += (Character.getNumericValue(digits.get(count)) * (8.0.pow(counter.toDouble())).toInt())
+                        decimal += (Character.getNumericValue(digits[count]) * (8.0.pow(counter.toDouble())).toInt())
                         counter--
                         count++
                     }

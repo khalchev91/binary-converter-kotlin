@@ -38,13 +38,13 @@ class HexaView : View() {
                     var decimal = 0
                     while (counter >= 0) {
                         when {
-                            digits.get(count).toUpperCase() == 'A' -> decimal += (10 * (16.0.pow(counter.toDouble())).toInt())
-                            digits.get(count).toUpperCase() == 'B' -> decimal += (11 * (16.0.pow(counter.toDouble())).toInt())
-                            digits.get(count).toUpperCase() == 'C' -> decimal += (12 * (16.0.pow(counter.toDouble())).toInt())
-                            digits.get(count).toUpperCase() == 'D' -> decimal += (13 * (16.0.pow(counter.toDouble())).toInt())
-                            digits.get(count).toUpperCase() == 'E' -> decimal += (14 * (16.0.pow(counter.toDouble())).toInt())
-                            digits.get(count).toUpperCase() == 'F' -> decimal += (15 * (16.0.pow(counter.toDouble())).toInt())
-                            else -> decimal += (Character.getNumericValue(digits.get(count)) * (16.0.pow(counter.toDouble())).toInt())
+                            digits[count].toUpperCase() == 'A' -> decimal += (10 * (16.0.pow(counter.toDouble())).toInt())
+                            digits[count].toUpperCase() == 'B' -> decimal += (11 * (16.0.pow(counter.toDouble())).toInt())
+                            digits[count].toUpperCase() == 'C' -> decimal += (12 * (16.0.pow(counter.toDouble())).toInt())
+                            digits[count].toUpperCase() == 'D' -> decimal += (13 * (16.0.pow(counter.toDouble())).toInt())
+                            digits[count].toUpperCase() == 'E' -> decimal += (14 * (16.0.pow(counter.toDouble())).toInt())
+                            digits[count].toUpperCase() == 'F' -> decimal += (15 * (16.0.pow(counter.toDouble())).toInt())
+                            else -> decimal += (Character.getNumericValue(digits[count]) * (16.0.pow(counter.toDouble())).toInt())
                         }
                         counter--
                         count++

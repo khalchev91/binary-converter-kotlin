@@ -31,7 +31,7 @@ class BinaryView : View() {
     fun convert() {
         when {
             inputText.value == "Binary" -> {
-                if (Regex(pattern = "[a-z A-Z 2-9]").containsMatchIn(input.value)) {
+                if (Regex(pattern = "[a-z A-Z2-9]").containsMatchIn(input.value)) {
                     error = false
                 } else {
                     val digits = input.value.toCharArray()
@@ -39,7 +39,7 @@ class BinaryView : View() {
                     var count = 0
                     var decimal = 0
                     while (counter >= 0) {
-                        decimal += (Character.getNumericValue(digits.get(count)) * (2.0.pow(counter.toDouble())).toInt())
+                        decimal += (Character.getNumericValue(digits[count]) * (2.0.pow(counter.toDouble())).toInt())
                         counter--
                         count++
                     }
